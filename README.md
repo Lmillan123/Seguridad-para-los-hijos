@@ -37,3 +37,5 @@ A continuación, te muestro un ejemplo de cómo podrías empezar con un módulo 
 - **Integración de Notificaciones:** Investiga cómo integrar servicios como Firebase para enviar notificaciones push en tiempo real. Esto es crucial para que la comunicación sea inmediata en situaciones de emergencia.  
 - **Autenticación y Roles:** Considera implementar un sistema de autenticación seguro para que solo los usuarios autorizados (padres y niños) puedan acceder a la app. Esto ayuda a evitar usos indebidos.  
 - **Feedback y Educación:** Además del chat, podrías agregar secciones con consejos de seguridad o videos educativos para enseñar a los niños a manejar situaciones de miedo y a comunicarse efectivamente.
+
+Con estos lineamientos y el ejemplo de código, tienes una base sólida para desarrollar una aplicación que no solo brinde seguridad sino también enseñe a los niños a comunicar sus emociones y situaciones de peligro de forma efectiva.  
