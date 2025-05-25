@@ -23,3 +23,17 @@ Aplicación para que los niños aprendan a comunicarse con sus padres en caso de
 ### **3. Ejemplo Básico con React Native**
 
 A continuación, te muestro un ejemplo de cómo podrías empezar con un módulo de chat simple en React Native. En este ejemplo, se implementa una pantalla de chat donde el niño puede enviar mensajes predeterminados o escribir uno propio. Puedes adaptarlo según lo necesites.
+
+**Explicación rápida del código javascript:**  
+- Se define una lista de mensajes preestablecidos que el niño puede usar con un toque.  
+- Se utiliza un `FlatList` para mostrar el historial de mensajes.  
+- Se ofrece un campo de texto para introducir mensajes personalizados.  
+- Cada vez que se envía un mensaje (ya sea preestablecido o escrito), se podría integrar una función adicional para enviar una notificación a los padres.
+
+---
+
+### **4. Consideraciones Adicionales**
+
+- **Integración de Notificaciones:** Investiga cómo integrar servicios como Firebase para enviar notificaciones push en tiempo real. Esto es crucial para que la comunicación sea inmediata en situaciones de emergencia.  
+- **Autenticación y Roles:** Considera implementar un sistema de autenticación seguro para que solo los usuarios autorizados (padres y niños) puedan acceder a la app. Esto ayuda a evitar usos indebidos.  
+- **Feedback y Educación:** Además del chat, podrías agregar secciones con consejos de seguridad o videos educativos para enseñar a los niños a manejar situaciones de miedo y a comunicarse efectivamente.
