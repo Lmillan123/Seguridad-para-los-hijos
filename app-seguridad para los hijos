@@ -1,0 +1,54 @@
+**React Native** usando **Expo** para la geolocalización. Este fragmento solicita permisos y obtiene la posición actual del dispositivo:
+
+```javascript
+import React, { useState, useEffect } from 'react';
+import { StyleSheet, Text, View, Button } from 'react-native';
+import * as Location from 'expo-location';
+
+export default function App() {
+  const [location, setLocation] = useState(null);
+  const [errorMsg, setErrorMsg] = useState(null);
+
+  useEffect(() => {
+    (async () => {
+      // Solicitamos permisos para acceder a la ubicación
+      let { status } = await Location.requestForegroundPermissionsAsync();
+      if (status !== 'granted') {
+        setErrorMsg('Permiso denegado para acceder a la ubicación');
+        return;
+      }
+      let loc = await Location.getCurrentPositionAsync({});
+      setLocation(loc);
+    })();
+  }, []);
+
+  let text = 'Esperando para obtener la ubicación...';
+  if (errorMsg) {
+    text = errorMsg;
+  } else if (location) {
+    text = `Ubicación: ${location.coords.latitude}, ${location.coords.longitude}`;
+  }
+
+  return (
+    <View style={styles.container}>
+      <Text>{text}</Text>
+      <Button
+        title="Actualizar Ubicación"
+        onPress={async () => {
+          let loc = await Location.getCurrentPositionAsync({});
+          setLocation(loc);
+        }}
+      />
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
+```
